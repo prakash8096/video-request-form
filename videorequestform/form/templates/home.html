@@ -7,17 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'check.css'%}">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 style="margin-left: 400px;">Video Request Form</h1>
-   <a href="{% url 'forms'%}" style="margin-left: 400px;"> Request video></a>
-    {% for x in videos %}
-    <div class="pra">
-        <h1>{{x.title}}</h1>
-        <p>{{x.video_desc}}</p>
+    <div class="container" style="margin-top: 50px;margin-bottom: 30px;">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                    <h1><b>Video request Page</b></h1>
+                    <a href="{% url 'forms'%}" class="btn btn-primary"> Request video</a>
 
+            </div>
+        </div>
     </div>
-    {% endfor %}
+  
+   <section>
+       <div class="container">
+            {% for x in videos %}
+           <div class="row">
+               <div class="col-md-8 col-md-offset-2">
+                    <h3>{{x.title}}</h3>
+                    <div class="well">
+                            
+                            <p>{{x.video_desc}}</p>
+                            </div>
+
+               </div>
+           </div>
+           {% endfor %}
+       </div>
+   </section>
+
+   
+
+    
+    
+
+
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     
 </body>
 </html>

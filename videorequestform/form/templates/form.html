@@ -5,16 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-   <form action="" method="POST">
-       <legend><b>VideoRequest form</b></legend>
-       <fieldset>
-       {% csrf_token %}
-       <p>{{form.Name}}</p>
-       <p>{{form.Description}}</p>
-       <input type="submit" name="Submit">
-    </fieldset>
-   </form>
+<body style="background-color: silver;">
+    <section>
+        
+        <div class="container">
+            <div class="row">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                <div class="col-md-3 col-md-offset-4">
+                    <h3>Add your video request </h3>
+                    <div class="form-group">
+                        {{form.Name}}
+                    </div>
+                   
+                   
+                </div>
+                <div class="col-md-3 col-md-offset-4">
+                        <div class="form-group">
+                                {{form.Description}}
+                            </div>
+                            <div class="form-group">
+                                <button class="form-control btn btn-success">Submit</button>
+                            </div>
+    
+                </div>
+            </form>
+                
+            </div>
+        </div>
+     </section> 
+
+
+
+   
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
